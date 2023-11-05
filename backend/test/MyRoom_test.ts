@@ -1,3 +1,4 @@
+// @ts-ignore
 import assert from "assert";
 import { ColyseusTestServer, boot } from "@colyseus/testing";
 
