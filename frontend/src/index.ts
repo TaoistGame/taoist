@@ -12,7 +12,6 @@ class MyGame extends Phaser.Scene
   {
     //  This is an example of a bundled image:
     this.load.image('logo', logoImg);
-
     //  This is an example of loading a static image from the public folder:
     this.load.image('background', 'assets/bg.jpg');
   }
