@@ -20,6 +20,8 @@ class MyGame extends Phaser.Scene
     //  This is an example of loading a static image from the public folder:
     this.load.image('background', 'assets/bg.jpg');
     //this.load.image('background', 'assets/background.jpg');
+
+    this.load.image('background1','assets/background.jpg');
   }
       
   create ()
@@ -46,6 +48,8 @@ class MyGame extends Phaser.Scene
 
   private onButtonClick() {
     console.log('Button clicked');
+
+    this.add.image(400, 300,'background1');
   }
 }
 
