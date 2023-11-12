@@ -55,6 +55,10 @@ class MyGame extends Phaser.Scene
 
 const config = {
   type: Phaser.AUTO,
+  scale:{
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
   parent: 'phaser-example',
   width: 800,
   height: 600,
