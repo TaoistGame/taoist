@@ -39,6 +39,8 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "colyseus": "^0.15.9",
+    "colyseus.js": "^0.15.14",
     "eslint": "^8.53.0",
     "phaser": "^3.60.0"
   }

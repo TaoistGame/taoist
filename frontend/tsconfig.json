@@ -1,19 +1,23 @@
 {
-    "extends": "@tsconfig/node14/tsconfig.json",
     "compilerOptions": {
-        "outDir": "./dist/",
-        "typeRoots": ["./src/typings", "node_modules/@types"],
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "es6",
-        "target": "es5",
-        "jsx": "react",
-        "allowJs": true,
-        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "target": "ES2015",
+        "module": "ES2015",
+
+        "strict": true,
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "allowJs": true,
+        "allowUnreachableCode": false,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "strictPropertyInitialization": false,
+
+        "moduleResolution": "node",
+        "lib": ["dom", "esnext"]
     },
-    "include": [
-        "./src/**/*"
-    ]
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
 }
