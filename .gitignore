@@ -7,7 +7,7 @@ Thumbs.db
 *.sublime-workspace
 *.vscode
 
-.parcel-cache/
+client/.parcel-cache
 
 # Vendors
 node_modules/
