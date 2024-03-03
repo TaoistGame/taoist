@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql-taoist/data
+    environment:
+      POSTGRES_DB: taoist
+      # Username: postgres
+      POSTGRES_PASSWORD: postgrespassword
+volumes:
+  db_data:
+networks:
+  default:
+    name: my-awesome-app-network

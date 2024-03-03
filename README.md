@@ -4,10 +4,12 @@
 ## Installation
 
 Install dependencies in both backend and frontend directories:
-1. `cd backend`
+1. `cd backend/server`
 2. `npm install`
-3. `cd ../frontend`
+3. `cd ../../frontend/client`
 4. `npm install`
+5. `cd ../..`
+6. `docker compose up`
 
 
 ## ESLint Configuration in IntelliJ
