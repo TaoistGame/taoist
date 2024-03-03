@@ -7,8 +7,6 @@ Thumbs.db
 *.sublime-workspace
 *.vscode
 
-client/.parcel-cache
-
 # Vendors
 node_modules/
 
@@ -16,3 +14,4 @@ node_modules/
 dist/
 /npm-debug.log
 
+/frontend/client/.parcel-cache/
