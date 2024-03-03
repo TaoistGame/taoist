@@ -1,10 +1,10 @@
 import { Room, Client } from 'colyseus';
-import { InputData, MyRoomState, Player } from './StarterVillageState';
+import { InputData, MyRoomState, Player, RoomOptions } from './StarterVillageState';
 
 export class StarterVillage extends Room<MyRoomState> {
   fixedTimeStep = 1000 / 60;
 
-  onCreate (options: any) {
+  onCreate (options: RoomOptions) {
     this.setState(new MyRoomState());
 
     // set map dimensions
@@ -56,7 +56,7 @@ export class StarterVillage extends Room<MyRoomState> {
     });
   }
 
-  onJoin (client: Client, options: any) {
+  onJoin (client: Client, options: RoomOptions) {
     console.log(client.sessionId, 'joined!');
 
     const player = new Player();

@@ -16,6 +16,12 @@ export class Player extends Schema {
   inputQueue: InputData[] = [];
 }
 
+export interface RoomOptions {
+  maxPlayers: number;
+  roomName: string;
+}
+
+
 export class MyRoomState extends Schema {
   @type('number') mapWidth: number;
   @type('number') mapHeight: number;
