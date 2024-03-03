@@ -16,6 +16,7 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    '@typescript-eslint/no-unused-vars': 'off',
     semi: 'error',
     indent: ['error', 2], // two spaces, not more, no tabs
     quotes: ['error', 'single', { 'allowTemplateLiterals': true }],

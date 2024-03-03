@@ -1,4 +1,4 @@
-import { Schema, Context, type, MapSchema } from "@colyseus/schema";
+import { Schema, Context, type, MapSchema } from '@colyseus/schema';
 
 export interface InputData {
   left: false;
@@ -9,16 +9,16 @@ export interface InputData {
 }
 
 export class Player extends Schema {
-  @type("number") x: number;
-  @type("number") y: number;
-  @type("number") tick: number;
+  @type('number') x: number;
+  @type('number') y: number;
+  @type('number') tick: number;
 
   inputQueue: InputData[] = [];
 }
 
 export class MyRoomState extends Schema {
-  @type("number") mapWidth: number;
-  @type("number") mapHeight: number;
+  @type('number') mapWidth: number;
+  @type('number') mapHeight: number;
 
   @type({ map: Player }) players = new MapSchema<Player>();
 }

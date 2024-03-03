@@ -1,5 +1,5 @@
-import { Room, Client } from "colyseus";
-import { InputData, MyRoomState, Player } from "./StarterVillageState";
+import { Room, Client } from 'colyseus';
+import { InputData, MyRoomState, Player } from './StarterVillageState';
 
 export class StarterVillage extends Room<MyRoomState> {
   fixedTimeStep = 1000 / 60;
@@ -37,28 +37,27 @@ export class StarterVillage extends Room<MyRoomState> {
       let input: InputData;
 
       // dequeue player inputs
-      while (input = player.inputQueue.shift()) {
+      while ((input = player.inputQueue.shift()) !== undefined) {
         if (input.left) {
           player.x -= velocity;
-
         } else if (input.right) {
           player.x += velocity;
         }
 
         if (input.up) {
           player.y -= velocity;
-
         } else if (input.down) {
           player.y += velocity;
         }
 
         player.tick = input.tick;
       }
+
     });
   }
 
   onJoin (client: Client, options: any) {
-    console.log(client.sessionId, "joined!");
+    console.log(client.sessionId, 'joined!');
 
     const player = new Player();
     player.x = Math.random() * this.state.mapWidth;
@@ -68,12 +67,12 @@ export class StarterVillage extends Room<MyRoomState> {
   }
 
   onLeave (client: Client, consented: boolean) {
-    console.log(client.sessionId, "left!");
+    console.log(client.sessionId, 'left!');
     this.state.players.delete(client.sessionId);
   }
 
   onDispose() {
-    console.log("room", this.roomId, "disposing...");
+    console.log('room', this.roomId, 'disposing...');
   }
 
 }
